@@ -1,0 +1,64 @@
+{
+  "name": "food-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "watch": "webpack --watch",
+    "start:dev": "npm-run-all -p -r start:dev-webpack start:dev-backend",
+    "start:dev-webpack": "webpack serve",
+    "start:dev-backend": "nodemon server/app.js",
+    "build": "webpack --mode production",
+    "prod-server": "npm run build && node server/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "bootstrap": "^4.3.1",
+    "bootswatch": "^4.3.1",
+    "eventemitter3": "^4.0.7",
+    "html-minifier": "^4.0.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/runtime": "^7.16.7",
+    "@webpack-cli/init": "^1.0.3",
+    "babel-jest": "^27.4.6",
+    "babel-loader": "^8.3.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^5.0.2",
+    "ejs": "^3.1.9",
+    "ejs-loader": "^0.5.0",
+    "html-loader": "^5.0.0",
+    "jest": "^27.4.7",
+    "jsdom": "^19.0.0",
+    "mini-css-extract-plugin": "^1.3.6",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^5.22.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ejs",
+      "ejx"
+    ],
+    "transform": {
+      "^.+\\.ejs$": "./src/testing/preprocess-ejs",
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}

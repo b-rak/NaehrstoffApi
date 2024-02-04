@@ -1,0 +1,23 @@
+<tr class="list-item" data-fdc="<%= fdcId %>">
+  <td>
+    <span data-testid="title"><%= title %></span>
+  </td>
+  <td>
+    <input
+      class="product-amount product-search__amount"
+      type="number"
+      value="100"
+      min="0"
+      data-fdc="<%= fdcId %>"
+    />
+    <button
+      type="button"
+      class="close remove-product"
+      data-dismiss="alert"
+      aria-label="Close"
+      data-fdc="<%= fdcId %>"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </td>
+</tr>
